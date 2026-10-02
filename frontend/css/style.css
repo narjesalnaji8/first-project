@@ -1,0 +1,138 @@
+body {
+    background-color: #f8f9fa;
+}
+
+html, body{
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* ===============================
+   Summary Cards
+================================ */
+
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    width: 100%;
+}
+
+
+
+/* ===============================
+   Table
+================================ */
+
+.table th {
+    white-space: nowrap;
+}
+
+.table td {
+    vertical-align: middle;
+}
+
+/* ===============================
+   Loading Spinner
+================================ */
+
+#loading {
+    min-height: 50px;
+}
+
+/* ===============================
+   Responsive
+================================ */
+
+@media (max-width: 768px) {
+
+    .summary-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===============================
+   Small Screens
+================================ */
+
+@media (max-width: 576px) {
+     table {
+        font-size: 0.85rem;
+    } 
+    .table th,
+    .table td {
+        padding: 0.5rem 0.3rem;
+    }
+
+    .table-responsive {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+/* ===============================
+   Dark Mode
+================================ */
+
+body.dark-mode {
+    background-color: #212529;
+    color: #f8f9fa;
+}
+
+/* Cards */
+body.dark-mode .card {
+    background-color: #2c3034;
+    color: #f8f9fa;
+    border-color: #495057;
+}
+
+/* Inputs */
+body.dark-mode .form-control,
+body.dark-mode .form-select {
+    background-color: #343a40;
+    color: #f8f9fa;
+    border-color: #6c757d;
+}
+
+body.dark-mode .form-control::placeholder {
+    color: #adb5bd;
+}
+
+/* Table */
+body.dark-mode .table {
+    --bs-table-bg: #212529;
+    --bs-table-color: #f8f9fa;
+    --bs-table-border-color: #495057;
+}
+
+
+
+body.dark-mode .table-striped > tbody > tr:nth-of-type(odd) > * {
+    background-color: #2c3034;
+}
+
+body.dark-mode .table-hover > tbody > tr:hover > * {
+    background-color: #343a40;
+    color: #fff;
+}
+
+body.dark-mode .table thead th {
+    background-color: #343a40;
+    color: #fff;
+}
+
+/* Modal */
+body.dark-mode .modal-content {
+    background-color: #2c3034;
+    color: #f8f9fa;
+}
+
+body.dark-mode .modal-header,
+body.dark-mode .modal-footer {
+    border-color: #495057;
+}
+
+/* Close button */
+body.dark-mode .btn-close {
+    filter: invert(1);
+}
